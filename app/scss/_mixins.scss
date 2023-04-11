@@ -1,0 +1,5 @@
+@mixin desktop {
+	@media (min-widht: 768px) {
+		@content
+	}
+}
