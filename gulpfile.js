@@ -6,7 +6,7 @@ const buildSass = () => {
 	console.log('Компиляция Scss');
 	return src('app/scss/app.scss')
 	.pipe(sass())
-	.pipe(dest('styles/'));
+	.pipe(dest('src/styles/'));
 };
 
 const buildPug = () => {
