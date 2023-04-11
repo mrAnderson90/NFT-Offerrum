@@ -1,0 +1,26 @@
+{
+  "name": "offerrum-test-layout",
+  "version": "1.0.0",
+  "description": "Test layout-project for Offerrum",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ruslan Andreev",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "htmlhint": "^1.1.4",
+    "prettier": "^2.8.7",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.60.0",
+    "stylelint": "^15.3.0",
+    "stylelint-config-standard": "^31.0.0",
+    "stylelint-config-standard-scss": "^7.0.1",
+    "stylelint-scss": "^4.6.0",
+    "surge": "^0.23.1"
+  }
+}
