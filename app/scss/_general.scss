@@ -3,10 +3,15 @@ body {
 	font-weight: 400;
 	font-family: Inter, sans-serif;
 	font-size: 16px;
+	color: $white;
+}
+
+a {
+	text-decoration: none;
 }
 
 h1 {
-	font-size: 25px;
+	font: 700 25px Inter, sans-serif;
 
 	@include desktop {
 		font-size: 72px;
@@ -14,7 +19,7 @@ h1 {
 }
 
 h2 {
-	font-size: 23px;
+	font: 600 23px Inter, sans-serif;
 
 	@include desktop {
 		font-size: 45px;
