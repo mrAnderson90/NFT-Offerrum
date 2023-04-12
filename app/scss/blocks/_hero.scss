@@ -1,0 +1,99 @@
+.hero {
+
+	&__bg {
+	width: 100%;
+	height: 100%;
+	@include flex;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $primary-dark;
+			z-index: -1;
+			content: "";
+		}
+	}
+
+	&__container {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(4, 25%);
+		max-width: 1280px;
+		width: 100%;
+	}
+
+	&__item {
+		grid-column: span 2;
+		@include flex(center, start) {
+			flex-direction: column;
+		}
+
+		&_img {
+			position: relative;
+			right: 15px;
+		}
+	}
+
+	&__title {
+		margin: 0 0 16px;
+		white-space: nowrap;
+
+		@include desktop {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__content {
+		margin: 0 0 40px;
+		font-size: 18px;
+		color: $bright;
+
+		@include desktop {
+			margin-bottom: 67px;
+			font-size: 23px;
+		}
+	}
+
+	&__add {
+		position: absolute;
+
+		&_1 {
+			top: 0;
+			right: 0;
+			width: 58.41px;
+			height: 103.26px;
+		}
+
+		&_2 {
+			bottom: 30%;
+			left: 0;
+			width: 33.88px;
+			height: 59.89px;
+		}
+
+		&_3 {
+			top: 0;
+			left: 10%;
+			width: 53px;
+			height: 53px;
+		}
+
+		&_4 {
+			top: 35%;
+			right: -120px;
+			width: 202.28px;
+			height: 202.28px;
+		}
+
+		&_5 {
+			top: 20%;
+			left: 40%;
+			width: 140.38px;
+			height: 171.28px;
+			z-index: -1;
+		}
+	}
+}

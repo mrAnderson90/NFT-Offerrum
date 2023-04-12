@@ -1,6 +1,6 @@
 @mixin desktop {
-	@media (min-widht: 768px) {
-		@content
+	@media (min-width: 768px) {
+		@content;
 	}
 }
 
@@ -8,4 +8,6 @@
 	display: flex;
 	justify-content: $justify-content;
 	align-items: $align-items;
+
+	@content;
 }
