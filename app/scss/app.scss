@@ -10,8 +10,11 @@
 // Mixins
 @import "mixins";
 
+// Blocks
+@import "blocks/navigation";
+
 // Components
-@import "components/btn.scss";
+@import "components/btn";
 
 // General
 @import "general";
