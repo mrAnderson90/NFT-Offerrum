@@ -334,33 +334,54 @@ template {
 .nav {
   max-width: 1280px;
   width: 100%;
-  margin-top: 30px;
+  padding: 0 16px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-.nav a {
-  display: flex;
   align-items: center;
 }
 .nav__container {
-  display: flex;
-  justify-content: space-between;
-  column-gap: 150px;
-}
-.nav__list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  column-gap: 105px;
-  list-style-type: none;
-}
-.nav__item a {
-  font-size: 23px;
-  color: #cecece;
+  display: none;
 }
 .nav .logo {
   height: 41.05px;
+}
+.nav__menu {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__menu img {
+  width: 40px;
+  height: 16px;
+}
+@media (min-width: 768px) {
+  .nav {
+    margin-top: 30px;
+    padding: 0;
+  }
+  .nav a {
+    display: flex;
+    align-items: center;
+  }
+  .nav__container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 150px;
+  }
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 105px;
+    list-style-type: none;
+  }
+  .nav__item a {
+    font-size: 23px;
+    color: #cecece;
+  }
 }
 
 .hero__bg {
@@ -500,6 +521,7 @@ body {
   height: 100%;
   font: 400 16px/1.2 Inter, sans-serif;
   color: #fff;
+  overflow: hidden;
 }
 
 .header {

@@ -2,35 +2,56 @@
 	// position: absolute;
 	max-width: 1280px;
 	width: 100%;
-	margin-top: 30px;
+	padding: 0 16px;
+	margin-top: 20px;
 	@include flex(space-between);
 
-	a {
-		display: flex;
-		align-items: center;
-	}
-
 	&__container {
-		display: flex;
-		justify-content: space-between;
-		column-gap: 150px;
-	}
-
-	&__list {
-		@include flex(space-between) {
-			column-gap: 105px;
-		}
-		list-style-type: none;
-	}
-
-	&__item {
-		a {
-			font-size: 23px;
-			color: $bright;
-		}
+		display: none;
 	}
 
 	.logo {
 		height: 41.05px;
+	}
+
+	&__menu {
+		background-color: transparent;
+		border: none;
+		@include flex;
+
+		img {
+			width: 40px;
+			height: 16px;
+		}
+	}
+
+	@include desktop {
+		margin-top: 30px;
+		padding: 0;
+
+		a {
+			display: flex;
+			align-items: center;
+		}
+	
+		&__container {
+			display: flex;
+			justify-content: space-between;
+			column-gap: 150px;
+		}
+	
+		&__list {
+			@include flex(space-between) {
+				column-gap: 105px;
+			}
+			list-style-type: none;
+		}
+	
+		&__item {
+			a {
+				font-size: 23px;
+				color: $bright;
+			}
+		}
 	}
 }
