@@ -27,13 +27,6 @@ main {
 }
 
 /**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
 
 /* Grouping content
    ========================================================================== */
@@ -332,13 +325,16 @@ template {
   src: url("../fonts/GT_Walsheim_Pro/GTWalsheimPro-Medium.ttf");
 }
 .nav {
+  position: fixed;
   max-width: 1280px;
   width: 100%;
   padding: 0 16px;
   margin-top: 20px;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 99;
 }
 .nav__container {
   display: none;
@@ -362,6 +358,9 @@ template {
     margin-top: 30px;
     padding: 0;
   }
+  .nav__menu {
+    display: none;
+  }
   .nav a {
     display: flex;
     align-items: center;
@@ -384,113 +383,113 @@ template {
   }
 }
 
-.hero__bg {
+.hero__container {
+  min-height: 100vh;
+  display: flex;
+  background-color: #1d2532;
+}
+.hero__container::before {
+  position: absolute;
+  top: -188px;
+  left: -120px;
+  width: 237px;
+  height: 237px;
+  background: linear-gradient(170.98deg, rgba(95, 56, 255, 0.35) 25.59%, rgba(255, 14, 222, 0.35) 100.44%);
+  filter: blur(86px);
+  transform: rotate(11.97deg);
+  content: "";
+}
+@media (min-width: 768px) {
+  .hero__container::before {
+    left: 0;
+    width: 415px;
+    height: 415px;
+  }
+}
+.hero__body {
+  position: relative;
+  flex: 1 1 auto;
+  max-width: 1280px;
   width: 100%;
-  height: 100%;
+  margin: 0 auto;
+  padding: 50px 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.hero__item {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.hero__bg::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #1d2532;
-  z-index: -1;
-  content: "";
-}
-.hero__container {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, 25%);
-  max-width: 1280px;
-  width: 100%;
-}
-.hero__item {
-  grid-column: span 2;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: column;
-}
-.hero__item_img {
-  position: relative;
-  right: 15px;
+.hero__img {
+  width: 320px;
+  height: 320px;
 }
 .hero__title {
-  margin: 0 0 16px;
-  white-space: nowrap;
-}
-@media (min-width: 768px) {
-  .hero__title {
-    margin-bottom: 20px;
-  }
+  margin: 55px 0 0;
 }
 .hero__content {
+  width: 220px;
+  height: 63px;
   margin: 0 0 40px;
   font-size: 18px;
   color: #cecece;
 }
 @media (min-width: 768px) {
-  .hero__content {
-    margin-bottom: 67px;
-    font-size: 23px;
+  .hero__body {
+    justify-content: center;
+    align-items: start;
+    text-align: left;
+    padding: 0;
   }
-}
-.hero__add {
-  position: absolute;
-}
-.hero__add_1 {
-  top: 0;
-  right: 0;
-  width: 58.41px;
-  height: 103.26px;
-}
-.hero__add_2 {
-  bottom: 30%;
-  left: 0;
-  width: 33.88px;
-  height: 59.89px;
-}
-.hero__add_3 {
-  top: 0;
-  left: 10%;
-  width: 53px;
-  height: 53px;
-}
-.hero__add_4 {
-  top: 35%;
-  right: -120px;
-  width: 202.28px;
-  height: 202.28px;
-}
-.hero__add_5 {
-  top: 20%;
-  left: 40%;
-  width: 140.38px;
-  height: 171.28px;
-  z-index: -1;
+  .hero__item {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+  .hero__img {
+    width: 592.06px;
+    height: 592.06px;
+  }
+  .hero__title {
+    margin: 0 0 20px;
+  }
+  .hero__content {
+    font-size: 23px;
+    width: 499px;
+    margin: 0 0 67px;
+  }
 }
 
 .btn {
   display: inline-block;
 }
 .btn_normal {
-  padding: 20px 30px;
-  font: 500 20px/1.3 "GT Walsheim Pro", sans-serif;
+  padding: 15px 30px;
+  font: 500 16px/1.3 "GT Walsheim Pro", sans-serif;
   color: #1d2532;
   background: linear-gradient(92.84deg, #1DD844 1.44%, #CBF62E 126.29%);
   box-shadow: 0px 4px 9px #1DD844, 2px -2px 8px #CBF62E;
   border: none;
   border-radius: 20px;
+  white-space: nowrap;
+  text-align: center !important;
 }
-.btn_normal:hover {
+.btn:hover {
   box-shadow: 0px 4px 15px #1DD844, 2px -2px 15px #CBF62E;
 }
-.btn_normal:active {
+.btn:active {
   box-shadow: inset 0px 3px 15px -5px #333, 0px 4px 15px #1DD844, 2px -2px 15px #CBF62E;
+}
+@media (min-width: 768px) {
+  .btn_normal {
+    padding: 20px 30px;
+    font-size: 20px;
+  }
 }
 .btn_outline {
   padding: 16px 22px;
@@ -510,9 +509,13 @@ template {
   background-color: rgba(224, 255, 172, 0.05);
 }
 
-* {
-  margin: 0;
+*,
+*::before,
+*::after {
   padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -521,7 +524,6 @@ body {
   height: 100%;
   font: 400 16px/1.2 Inter, sans-serif;
   color: #fff;
-  overflow: hidden;
 }
 
 .header {
@@ -551,4 +553,11 @@ h2 {
   h2 {
     font-size: 45px;
   }
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

@@ -1,99 +1,95 @@
 .hero {
-
-	&__bg {
-	width: 100%;
-	height: 100%;
-	@include flex;
+	&__container {
+		min-height: 100vh;
+		display: flex;
+		background-color: $primary-dark;
 
 		&::before {
 			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: $primary-dark;
-			z-index: -1;
-			content: "";
+			top: -188px;
+			left: -120px;
+			width: 237px;
+			height: 237px;
+			background: linear-gradient(
+				170.98deg,
+				rgba(95, 56, 255, 0.35) 25.59%,
+				rgba(255, 14, 222, 0.35) 100.44%
+				);
+				filter: blur(86px);
+				transform: rotate(11.97deg);
+			content: '';
+
+			@include desktop {
+				left: 0;
+				width: 415px;
+				height: 415px;
+			}
 		}
 	}
 
-	&__container {
+	&__body {
 		position: relative;
-		display: grid;
-		grid-template-columns: repeat(4, 25%);
+		flex: 1 1 auto;
 		max-width: 1280px;
 		width: 100%;
+		margin: 0 auto;
+		padding: 50px 22px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 1;
 	}
 
 	&__item {
-		grid-column: span 2;
-		@include flex(center, start) {
-			flex-direction: column;
-		}
+		@include flex;
+	}
 
-		&_img {
-			position: relative;
-			right: 15px;
-		}
+	&__img {
+		width: 320px;
+		height: 320px;
 	}
 
 	&__title {
-		margin: 0 0 16px;
-		white-space: nowrap;
-
-		@include desktop {
-			margin-bottom: 20px;
-		}
+		margin: 55px 0 0;
 	}
 
 	&__content {
+		width: 220px;
+		height: 63px;
 		margin: 0 0 40px;
 		font-size: 18px;
 		color: $bright;
-
-		@include desktop {
-			margin-bottom: 67px;
-			font-size: 23px;
-		}
 	}
 
-	&__add {
-		position: absolute;
+	@include desktop {
+		&__body {
+			justify-content: center;
+			align-items: start;
+			text-align: left;
+			padding: 0;
+		}
 
-		&_1 {
-			top: 0;
+		&__item {
+			position: absolute;
 			right: 0;
-			width: 58.41px;
-			height: 103.26px;
-		}
-
-		&_2 {
-			bottom: 30%;
-			left: 0;
-			width: 33.88px;
-			height: 59.89px;
-		}
-
-		&_3 {
-			top: 0;
-			left: 10%;
-			width: 53px;
-			height: 53px;
-		}
-
-		&_4 {
-			top: 35%;
-			right: -120px;
-			width: 202.28px;
-			height: 202.28px;
-		}
-
-		&_5 {
-			top: 20%;
-			left: 40%;
-			width: 140.38px;
-			height: 171.28px;
 			z-index: -1;
+		}
+
+		&__img {
+			width: 592.06px;
+			height: 592.06px;
+		}
+
+		&__title {
+			margin: 0 0 20px;
+		}
+
+		&__content {
+			font-size: 23px;
+			width: 499px;
+			margin: 0 0 67px;
 		}
 	}
 }

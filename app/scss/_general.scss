@@ -1,6 +1,10 @@
-* {
-	margin: 0;
+*,
+*::before,
+*::after {
 	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
 }
 
 html,
@@ -9,7 +13,6 @@ body {
 	height: 100%;
 	font: 400 16px/1.2 Inter, sans-serif;
 	color: $white;
-	overflow: hidden;
 }
 
 .header {
@@ -35,4 +38,11 @@ h2 {
 	@include desktop {
 		font-size: 45px;
 	}
+}
+
+.wrapper {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
