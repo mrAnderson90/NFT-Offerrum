@@ -42,12 +42,8 @@
 		z-index: 1;
 	}
 
-	&__item {
-		@include flex;
-	}
-
 	&__img {
-		width: 320px;
+		@include flex;
 		height: 320px;
 	}
 
@@ -71,15 +67,11 @@
 			padding: 0;
 		}
 
-		&__item {
-			position: absolute;
-			right: 0;
-			z-index: -1;
-		}
-
 		&__img {
-			width: 592.06px;
-			height: 592.06px;
+			position: absolute;
+			right: -50px;
+			height: 750px;
+			z-index: -1;
 		}
 
 		&__title {

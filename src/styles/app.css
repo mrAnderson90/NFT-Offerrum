@@ -420,13 +420,10 @@ template {
   align-items: center;
   z-index: 1;
 }
-.hero__item {
+.hero__img {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.hero__img {
-  width: 320px;
   height: 320px;
 }
 .hero__title {
@@ -446,14 +443,11 @@ template {
     text-align: left;
     padding: 0;
   }
-  .hero__item {
-    position: absolute;
-    right: 0;
-    z-index: -1;
-  }
   .hero__img {
-    width: 592.06px;
-    height: 592.06px;
+    position: absolute;
+    right: -50px;
+    height: 750px;
+    z-index: -1;
   }
   .hero__title {
     margin: 0 0 20px;
@@ -627,6 +621,9 @@ template {
   width: 21.91px;
   height: 21.91px;
 }
+.item_6 {
+  display: none;
+}
 @media (min-width: 768px) {
   .item_1 {
     display: block;
@@ -659,6 +656,13 @@ template {
     left: 150px;
     width: 84px;
     height: 84px;
+  }
+  .item_6 {
+    display: block;
+    top: 25%;
+    left: 40%;
+    width: 87.52px;
+    height: 87.52px;
   }
 }
 

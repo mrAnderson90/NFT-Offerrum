@@ -39,6 +39,10 @@
 		height: 21.91px;
 	}
 
+	&_6 {
+		display: none;
+	}
+
 	@include desktop {
 		&_1 {
 			display: block;
@@ -75,6 +79,14 @@
 			left: 150px;
 			width: 84px;
 			height: 84px;
+		}
+
+		&_6 {
+			display: block;
+			top: 25%;
+			left: 40%;
+			width: 87.52px;
+			height: 87.52px;
 		}
 	}
 }
