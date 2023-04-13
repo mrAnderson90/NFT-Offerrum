@@ -1,0 +1,80 @@
+.item {
+	position: absolute;
+
+	&_1 {
+		display: none;
+		bottom: 0;
+		left: 0;
+		width: 440px;
+		height: 440px;
+	}
+
+	&_2 {
+		top: -20px;
+		right: -15px;
+		width: 137.41px;
+		height: 137.41px;
+		filter: blur(10px);
+	}
+
+	&_3 {
+		bottom: 20px;
+		right: 10px;
+		width: 62.86px;
+		height: 62.86px;
+		filter: blur(8.5px);
+	}
+
+	&_4 {
+		top: -50px;
+		right: -40px;
+		width: 87.59px;
+		height: 87.59px;
+	}
+
+	&_5 {
+		top: 100px;
+		left: 20px;
+		width: 21.91px;
+		height: 21.91px;
+	}
+
+	@include desktop {
+		&_1 {
+			display: block;
+			bottom: 0;
+			left: 0;
+			width: 440px;
+			height: 440px;
+		}
+	
+		&_2 {
+			top: 0;
+			right: 0;
+			width: 440px;
+			height: 440px;
+		}
+	
+		&_3 {
+			bottom: 150px;
+			right: 143.24px;
+			width: 131.66px;
+			height: 131.66px;
+			filter: blur(12px);
+		}
+
+		&_4 {
+			top: -60px;
+			right: 95px;
+			width: 151.89px;
+			height: 151.89px;
+		}
+	
+		&_5 {
+			top: 100px;
+			left: 150px;
+			width: 84px;
+			height: 84px;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+.opt {
+	&__container {
+		position: relative;
+		@include flex(start) {
+			flex-direction: column;
+			gap: 30px;
+		}
+		background: linear-gradient(
+			212.69deg,
+			#323E51 4.9%,
+			#1D2532 55.16%
+		);
+		margin-top: 70px;
+		padding: 40px 30px;
+		text-align: center;
+		border-radius: $br-20;
+	}
+
+	@include desktop {
+		&__container {
+			max-height: 1093px;
+			gap: 65px;
+			margin-top: 0;
+			padding: 130px 0;
+		}
+	}
+}
