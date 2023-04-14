@@ -1,8 +1,10 @@
 nav.nav
 	a(href="#") 
 		img.logo(src="./src/images/logo.svg", alt="logo")
-	button.nav__menu
+	button.nav__button(id='menu')
 		img(src="./src/images/menu.svg", alt="burger menu")
+	.nav__modal
+		include menu.pug
 	.nav__container
 		ul.nav__list
 			li.nav__item 

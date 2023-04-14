@@ -13,10 +13,10 @@
 	}
 
 	.logo {
-		height: 41.05px;
+		height: 27.27px;
 	}
 
-	&__menu {
+	&__button {
 		background-color: transparent;
 		border: none;
 		@include flex;
@@ -25,13 +25,39 @@
 			width: 40px;
 			height: 16px;
 		}
+
+		&:active {
+			filter: invert(30%);
+		}
+	}
+
+	&__modal {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		padding-left: 16px;
+		background-color: rgba(48, 9, 97, 0.3);
+		backdrop-filter: blur(7.5px);
+	}
+
+	&__menu {
+		width: 100%;
+		padding: 20px 20px 60px;
+		background-color: $secondary-dark;
+		border-bottom-left-radius: 30px;
 	}
 
 	@include desktop {
 		margin-top: 30px;
 		padding: 0;
 
-		&__menu {
+		.logo {
+			height: 41.05px;
+		}
+
+		&__button {
 			display: none;
 		}
 

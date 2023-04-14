@@ -18,10 +18,17 @@ const buildPug = () => {
 	.pipe(dest('./'));
 };
 
+const buildJS = () => {
+	console.log('JS compile');
+	return src('app/js/index.js')
+	.pipe(dest('src/js/'));
+}
+
 const watchers = () => {
 	watch('app/scss/**/*.scss', buildSass);
 	watch('app/pages/**/*.pug', buildPug);
+	watch('app/js/**/*.js', buildJS);
 }
 
-exports.build = parallel(buildSass, buildPug);
+exports.build = parallel(buildSass, buildPug, buildJS);
 exports.watchers = watchers;
