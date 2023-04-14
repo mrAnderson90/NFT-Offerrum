@@ -43,7 +43,9 @@
 
 	@include desktop {
 		&__box {
-			grid-template-columns: repeat(2, auto);
+			grid-template-areas:
+				" item_1 item_4 "
+				" item_3 item_2 ";
 			row-gap: 70px;
 			column-gap: 50px;
 			margin-bottom: 20px;
@@ -63,6 +65,14 @@
 
 		&__content {
 			font-size: 19px;
+		}
+
+		&__item_2 {
+			grid-area: item_2;
+		}
+
+		&__item_4 {
+			grid-area: item_4;
 		}
 	}
 }
