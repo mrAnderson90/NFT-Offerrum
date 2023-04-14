@@ -365,6 +365,13 @@ template {
   padding-left: 16px;
   background-color: rgba(48, 9, 97, 0.3);
   backdrop-filter: blur(7.5px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.nav__modal.active {
+  visibility: visible;
+  opacity: 1;
 }
 .nav__menu {
   width: 100%;
@@ -634,7 +641,7 @@ template {
 }
 @media (min-width: 768px) {
   .card__box {
-    grid-template-columns: repeat(2, auto);
+    grid-template-areas: " item_1 item_4 " " item_3 item_2 ";
     row-gap: 70px;
     column-gap: 50px;
     margin-bottom: 20px;
@@ -651,6 +658,12 @@ template {
   }
   .card__content {
     font-size: 19px;
+  }
+  .card__item_2 {
+    grid-area: item_2;
+  }
+  .card__item_4 {
+    grid-area: item_4;
   }
 }
 
@@ -692,6 +705,7 @@ template {
 }
 .item_6 {
   display: none;
+  z-index: -1;
 }
 @media (min-width: 768px) {
   .item_1 {

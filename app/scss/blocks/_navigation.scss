@@ -40,6 +40,14 @@
 		padding-left: 16px;
 		background-color: rgba(48, 9, 97, 0.3);
 		backdrop-filter: blur(7.5px);
+		visibility: hidden;
+		opacity: 0;
+		transition: all .4s ease;
+
+		&.active {
+			visibility: visible;
+			opacity: 1;
+		}
 	}
 
 	&__menu {

@@ -1,9 +1,9 @@
 nav.nav
 	a(href="#") 
 		img.logo(src="./src/images/logo.svg", alt="logo")
-	button.nav__button(id='menu')
+	button.nav__button(id='open-modal-menu')
 		img(src="./src/images/menu.svg", alt="burger menu")
-	.nav__modal
+	.nav__modal(id='modal-menu')
 		include menu.pug
 	.nav__container
 		ul.nav__list
