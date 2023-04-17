@@ -414,9 +414,12 @@ template {
 }
 
 .hero__container {
+  position: relative;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   background-color: #1d2532;
+  overflow: hidden;
 }
 .hero__container::before {
   position: absolute;
