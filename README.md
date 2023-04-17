@@ -1,8 +1,8 @@
-# NFT Project
+# NFT Offerrum
 
 ## _Follow the link to see deploy:_
 
-[Main page]()
+[Main page](https://discreet-fly.surge.sh/index.html)
 
 ## The following technologies were used:
 - HTML5
