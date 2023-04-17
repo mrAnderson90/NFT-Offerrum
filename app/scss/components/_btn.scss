@@ -11,7 +11,7 @@
 			#CBF62E 126.29%
 		);
 		box-shadow:
-    	0px 4px 9px #1DD844,
+    	0 4px 9px #1DD844,
     	2px -2px 8px #CBF62E;
 		border: none;
 		border-radius: 20px;
@@ -21,14 +21,14 @@
 
 		&:hover {
 			box-shadow:
-				0px 4px 15px #1DD844,
+				0 4px 15px #1DD844,
 				2px -2px 15px #CBF62E;
 		}
 
 		&:active {
 			box-shadow:
-				inset 0px 3px 15px -5px #333,
-				0px 4px 15px #1DD844,
+				inset 0 3px 15px -5px #333,
+				0 4px 15px #1DD844,
 				2px -2px 15px #CBF62E;
 		}
 
@@ -55,7 +55,7 @@
 		&:active {
 			color: $green;
 			border-color: $green;
-			background-color: rgba(224, 255, 172, 0.05);
+			background-color: rgb(224 255 172 / 5%);
 		}
 	}
 }

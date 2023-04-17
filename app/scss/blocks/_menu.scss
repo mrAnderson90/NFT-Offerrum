@@ -4,26 +4,19 @@
 	padding: 20px 20px 60px;
 	background-color: $secondary-dark;
 	border-bottom-left-radius: 30px;
+
 	@include flex(space-between, start) {
 		flex-direction: column;
 	}
 
 	&__header {
 		width: 100%;
+
 		@include flex(space-between)
 	}
 
 	&__logo {
 		height: 27.27px;
-	}
-
-	&__close {
-		width: 22.52px;
-		height: 22.52px;
-
-		&:active {
-			filter: invert(30%);
-		}
 	}
 
 	&__body {

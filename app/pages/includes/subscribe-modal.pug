@@ -1,0 +1,12 @@
+.subscribe(id='subscribe-modal')
+	.subscribe__container
+		.subscribe__body
+			a.subscribe__close(id='subscribe-close')
+				img.close.close_responsive(src="./src/images/cancel.svg", alt="close subscribe")
+			h2.subscribe__title Начни прямо сейчас!
+			p.subscribe__content
+				| Получи все нужные навыки для заработка на NFT всего за 28 дней!
+			form(action="#").subscribe__form
+				label(for="mail").sr-only
+				input(type="email" id="mail" placeholder="Ваш email")
+				button.btn.btn_normal Оплатить

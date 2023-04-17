@@ -12,7 +12,7 @@
         <button class="nav__button" id="open-modal-menu"><img src="./src/images/menu.svg" alt="burger menu"></button>
         <div class="nav__modal" id="modal-menu">
           <div class="menu">
-            <div class="menu__header"><a href="#"> <img class="menu__logo" src="./src/images/logo.svg" alt="logo"></a><a href="#"> <img class="menu__close" id="close-modal-menu" src="./src/images/cancel.svg" alt="close menu"></a></div>
+            <div class="menu__header"><a href="#"> <img class="menu__logo" src="./src/images/logo.svg" alt="logo"></a><a href="#"> <img class="close" id="close-modal-menu" src="./src/images/cancel.svg" alt="close menu"></a></div>
             <div class="menu__body">
               <ul class="menu__list">
                 <li class="menu__item"><a href="#">Главная</a></li>
@@ -36,7 +36,20 @@
         <div class="hero__body">
           <h1 class="hero__title">Не упусти<br>возможность войти<br>в <strong>прибыльную нишу</strong></h1><img class="hero__img" src="./src/images/group.svg" alt="hero nft"><img class="item item_6" src="./src/images/ellipse/green.svg" alt="roud green">
           <p class="hero__content">Получи все нужные навыки для заработка на NFT всего за 28 дней!</p>
-          <button class="hero__btn btn btn_normal">Начать зарабатывать на NFT</button>
+          <button class="hero__btn btn btn_normal" id="subscribe-open">Начать зарабатывать на NFT</button>
+        </div>
+        <div class="subscribe" id="subscribe-modal">
+          <div class="subscribe__container">
+            <div class="subscribe__body"><a class="subscribe__close" id="subscribe-close"><img class="close close_responsive" src="./src/images/cancel.svg" alt="close subscribe"></a>
+              <h2 class="subscribe__title">Начни прямо сейчас!</h2>
+              <p class="subscribe__content">Получи все нужные навыки для заработка на NFT всего за 28 дней!</p>
+              <form class="subscribe__form" action="#">
+                <label class="sr-only" for="mail"></label>
+                <input type="email" id="mail" placeholder="Ваш email">
+                <button class="btn btn_normal">Оплатить</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </main>

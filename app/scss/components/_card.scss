@@ -10,13 +10,14 @@
 		position: relative;
 		width: 260px;
 		height: 273px;
+
 		@include flex {
 			flex-direction: column;
 			gap: 20px;
 		}
 		padding: 0 22px;
 		border-radius: $br-20;
-		background: rgba(51, 62, 81);
+		background: rgb(51 62 81);
 		z-index: 99;
 
 		&::before {
@@ -24,7 +25,7 @@
 			bottom: -17px;
 			width: 226px;
 			height: 235px;
-			background: rgba(51, 62, 81, 0.6);
+			background: rgb(51 62 81 / 60%);
 			border-radius: $br-20;
 			z-index: -1;
 			content: '';

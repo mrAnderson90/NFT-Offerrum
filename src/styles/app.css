@@ -7,7 +7,7 @@
  */
 html {
   line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -45,7 +45,7 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace; /* 1 */
+  font-family: monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -83,7 +83,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
+  font-family: monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -165,7 +165,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-  -webkit-appearance: button;
+  appearance: button;
 }
 
 /**
@@ -248,7 +248,7 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield; /* 1 */
+  appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
 
@@ -256,7 +256,7 @@ textarea {
  * Remove the inner padding in Chrome and Safari on macOS.
  */
 [type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 /**
@@ -264,7 +264,7 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
+  appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
 
@@ -325,9 +325,9 @@ template {
   src: url("../fonts/GT_Walsheim_Pro/GTWalsheimPro-Medium.ttf");
 }
 .nav {
+  width: 100%;
   position: fixed;
   max-width: 1280px;
-  width: 100%;
   padding: 0 16px;
   margin-top: 20px;
   background-color: transparent;
@@ -338,6 +338,11 @@ template {
 }
 .nav__container {
   display: none;
+}
+.nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .nav .logo {
   height: 27.27px;
@@ -368,10 +373,6 @@ template {
   visibility: hidden;
   opacity: 0;
   transition: all 0.4s ease;
-}
-.nav__modal.active {
-  visibility: visible;
-  opacity: 1;
 }
 .nav__menu {
   width: 100%;
@@ -530,13 +531,6 @@ template {
 .menu__logo {
   height: 27.27px;
 }
-.menu__close {
-  width: 22.52px;
-  height: 22.52px;
-}
-.menu__close:active {
-  filter: invert(30%);
-}
 .menu__body {
   display: flex;
   justify-content: start;
@@ -557,6 +551,91 @@ template {
   color: #cecece;
 }
 
+.subscribe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(48, 9, 97, 0.3);
+  backdrop-filter: blur(7.5px);
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.subscribe__container {
+  flex: 1 1 auto;
+  max-width: 670px;
+  padding: 45px 16px 31px;
+  background: radial-gradient(42.84% 203.07% at 15.58% -40.39%, #323E51 0%, #1D2532 100%);
+  border-radius: 30px;
+}
+.subscribe__body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  row-gap: 25px;
+}
+.subscribe__close {
+  position: absolute;
+  top: -20.51px;
+  right: 8.49px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subscribe__title {
+  font-weight: 700;
+  line-height: 1.05;
+  white-space: nowrap;
+}
+.subscribe__content {
+  font-size: 18px;
+}
+.subscribe__form {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  row-gap: 17px;
+}
+.subscribe__form > * {
+  width: 100%;
+  border-radius: 10px;
+}
+.subscribe__form input {
+  padding: 15px 16px;
+}
+@media (min-width: 768px) {
+  .subscribe__container {
+    padding: 56px 128px 80px 70px;
+    border-radius: 20px;
+  }
+  .subscribe__close {
+    position: absolute;
+    top: -10.76px;
+    right: -54.24px;
+  }
+  .subscribe__content {
+    font-size: 21px;
+  }
+  .subscribe__form {
+    row-gap: 18px;
+  }
+  .subscribe__form input {
+    padding: 15px 20px;
+  }
+}
+
 .btn {
   display: inline-block;
 }
@@ -565,17 +644,17 @@ template {
   font: 500 16px/1.3 "GT Walsheim Pro", sans-serif;
   color: #1d2532;
   background: linear-gradient(92.84deg, #1DD844 1.44%, #CBF62E 126.29%);
-  box-shadow: 0px 4px 9px #1DD844, 2px -2px 8px #CBF62E;
+  box-shadow: 0 4px 9px #1DD844, 2px -2px 8px #CBF62E;
   border: none;
   border-radius: 20px;
   white-space: nowrap;
   text-align: center !important;
 }
 .btn:hover {
-  box-shadow: 0px 4px 15px #1DD844, 2px -2px 15px #CBF62E;
+  box-shadow: 0 4px 15px #1DD844, 2px -2px 15px #CBF62E;
 }
 .btn:active {
-  box-shadow: inset 0px 3px 15px -5px #333, 0px 4px 15px #1DD844, 2px -2px 15px #CBF62E;
+  box-shadow: inset 0 3px 15px -5px #333, 0 4px 15px #1DD844, 2px -2px 15px #CBF62E;
 }
 @media (min-width: 768px) {
   .btn_normal {
@@ -768,6 +847,7 @@ body {
 
 .header {
   position: relative;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -819,4 +899,37 @@ h2 {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.close {
+  width: 22.52px;
+  height: 22.52px;
+}
+.close:active {
+  filter: invert(30%);
+}
+.close_responsive {
+  width: 17.02px;
+  height: 17.02px;
+}
+@media (min-width: 768px) {
+  .close_responsive {
+    width: 22.52px;
+    height: 22.52px;
+  }
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
 }

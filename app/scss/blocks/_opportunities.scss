@@ -1,6 +1,7 @@
 .opt {
 	&__container {
 		position: relative;
+
 		@include flex(start) {
 			flex-direction: column;
 			gap: 30px;

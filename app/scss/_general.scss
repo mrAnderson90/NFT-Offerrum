@@ -17,6 +17,7 @@ body {
 
 .header {
 	position: relative;
+	width: 100%;
 	@include flex(center, start);
 }
 
@@ -63,4 +64,38 @@ h2 {
 	max-width: 1280px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.close {
+	width: $cls-regular;
+	height: $cls-regular;
+
+	&:active {
+		filter: invert(30%);
+	}
+
+	&_responsive {
+		width: $cls-responsive;
+		height: $cls-responsive;
+
+		@include desktop {
+			width: $cls-regular;
+			height: $cls-regular;
+		}
+	}
+}
+
+.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	border: 0;
 }
